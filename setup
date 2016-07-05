@@ -1,0 +1,4 @@
+
+pip install pelican markdown ghp-import
+echo "symlink install theme $PWD/Flex"
+sudo pelican-themes -s $PWD/Flex
