@@ -17,7 +17,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Github', 'https://github.com/jswh/'),)
+LINKS = (('Github', 'https://github.com/jswh/'),('Wiki', "http://wiki.jswh.me"))
 
 DEFAULT_PAGINATION = 15
 
