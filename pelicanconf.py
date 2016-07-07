@@ -32,10 +32,10 @@ SITEURL = 'http://blog.jswh.me'
 RELATIVE_URLS = False
 SITETITLE = 'Mirror Lake'
 SITESUBTITLE = 'stay calm like a mirror lake......'
-SITELOGO = 'http://7xoglt.com1.z0.glb.clouddn.com/6405755.jpeg'
+SITELOGO = 'http://cdn.jswh.me/6405755.jpeg'
 BROWSER_COLOR = '#333'
 
-FAVICON = 'http://7xoglt.com1.z0.glb.clouddn.com/6405755.jpeg'
+FAVICON = 'http://cdn.jswh.me/6405755.jpeg'
 ROBOTS = 'index, follow'
 
 COPYRIGHT_YEAR = 2018
