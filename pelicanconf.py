@@ -17,7 +17,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Wiki', "http://wiki.jswh.me"),)
+LINKS = (('My Wiki', "http://wiki.jswh.me"),)
 
 DEFAULT_PAGINATION = 15
 
