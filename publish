@@ -1,2 +1,3 @@
 source $PWD/bin/activate
+python -V
 make github

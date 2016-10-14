@@ -17,7 +17,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Wiki', "http://wiki.jswh.me"))
+#LINKS = (('Wiki', "http://wiki.jswh.me"))
 
 DEFAULT_PAGINATION = 15
 
@@ -45,7 +45,7 @@ EXTRA_PATH_METADATA = {
 }
 #CUSTOM_CSS = 'static/custom.css'
 
-M46255117AIN_MENU = True
+MAIN_MENU = True
 
 SOCIAL = (('linkedin', 'http://www.linkedin.com/in/曹-维杰-a46255117'),
           ('github', 'https://github.com/jswh'))

@@ -1,82 +1,171 @@
+
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-        <title>Mirror Lake - Articles by jswh</title>
-        <meta charset="utf-8" />
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Mirror Lake Full Atom Feed" />
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Mirror Lake Atom">
+
+
+    <link rel="shortcut icon" href="http://cdn.jswh.me/6405755.jpeg" type="image/x-icon">
+    <link rel="icon" href="http://cdn.jswh.me/6405755.jpeg" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="author" content="jswh" />
+    <meta name="description" content="" />
+<meta property="og:site_name" content="Mirror Lake"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="Mirror Lake"/>
+<meta property="og:description" content=""/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content=""/>
+<meta property="og:image" content="http://cdn.jswh.me/6405755.jpeg">
+
+  <title>Mirror Lake &ndash;     Posts by jswh
+:</title>
 </head>
+<body>
+  <aside>
+    <div>
+      <a href="">
+        <img src="http://cdn.jswh.me/6405755.jpeg" alt="Mirror Lake" title="Mirror Lake">
+      </a>
+      <h1><a href="">Mirror Lake</a></h1>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">Mirror Lake <strong>stay calm like a mirror lake......</strong></a></h1>
-        </header><!-- /#banner -->
-        <nav id="menu"><ul>
-        </ul></nav><!-- /#menu -->
-<section id="content">
-<h2>Articles by jswh</h2>
+<p>stay calm like a mirror lake......</p>
 
-<ol id="post-list">
-        <li><article class="hentry">
-                <header> <h2 class="entry-title"><a href="/zi-xue-zhi-nan-flex-bison.html" rel="bookmark" title="Permalink to 自学指南 Flex & Bison">自学指南 Flex & Bison</a></h2> </header>
-                <footer class="post-info">
-                    <abbr class="published" title="2016-10-12T09:33:00+08:00"> Wed 12 October 2016 </abbr>
-                    <address class="vcard author">By
-                        <a class="url fn" href="/author/jswh.html">jswh</a>
-                    </address>
-                </footer><!-- /.post-info -->
-                <div class="entry-content"> <p>因为公司在用 phalcon，这种 c 扩展的框架 IDE 没有办法补全，所以想写一个把 zephir 转译成 PHP IDE Helper 的东西。本来想直接 Reflection 取一下类信息就好了，奈何最终效果不理想，本来 <a href="https://zephir-lang.com/">Zephir</a> 中有的很多信息都丢掉了，注释也全部没有。所以还是要用 passer 转译。  </p>
+      <ul class="social">
+        <li><a class="sc-linkedin" href="http://www.linkedin.com/in/曹-维杰-a46255117" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/jswh" target="_blank"><i class="fa fa-github"></i></a></li>
+      </ul>
+    </div>
+  </aside>
+  <main>
+    <nav>
+      <a href="">    Home
+</a>
+
+
+      <a href="/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article>
+  <header>
+    <h2><a href="/zi-xue-zhi-nan-flex-bison.html#zi-xue-zhi-nan-flex-bison">自学指南 Flex & Bison</a></h2>
+    <p>
+          Posted on Wed 12 October 2016 in <a href="/category/zi-xue-zhi-nan.html">自学指南</a>
+
+
+
+    </p>
+  </header>
+  <div>
+      <p>因为公司在用 phalcon，这种 c 扩展的框架 IDE 没有办法补全，所以想写一个把 zephir 转译成 PHP IDE Helper 的东西。本来想直接 Reflection 取一下类信息就好了，奈何最终效果不理想，本来 <a href="https://zephir-lang.com/">Zephir</a> 中有的很多信息都丢掉了，注释也全部没有。所以还是要用 passer 转译。  </p>
 <p>只能说兴趣果然是最好的老师。之前编译原理看三段打瞌睡，死活读不下去，这下却是兴致满满了。只是Flex、Bison入门资料太少，网上写的那些文章都是浅尝辄止，完全没有可实践性。读手册又太过乏味。</p>
 <p>看来看去，还是<a href="http://web.iitd.ac.in/~sumeet/flex__bison.pdf">动物书的 Flex &amp; Bison</a> 读起来舒服。</p>
-<p>对于词法分析语法分析完全没有概念的同学，可以先看看<a href="http://www.capsl.udel.edu/courses/cpeg421/2012/slides/Tutorial-Flex_Bison.pdf">这个 PDF</a> 了解一下，再读动物书会好一些，不然有些没头没脑。内容基本和书里的第一章重合，但简单介绍了一下 Flex ...</p> </div><!-- /.entry-content -->
-        </article></li>
-        <li><article class="hentry">
-                <header> <h2 class="entry-title"><a href="/20161004.html" rel="bookmark" title="Permalink to 20161004">20161004</a></h2> </header>
-                <footer class="post-info">
-                    <abbr class="published" title="2016-10-04T04:26:00+08:00"> Tue 04 October 2016 </abbr>
-                    <address class="vcard author">By
-                        <a class="url fn" href="/author/jswh.html">jswh</a>
-                    </address>
-                </footer><!-- /.post-info -->
-                <div class="entry-content"> <p>大半夜的睡不着。一半是因为老家秋天的蚊子，大个，嗡嗡声能达数个分呗，一口一个大包；另一半还是每次回家都止不住的沮丧程序。看着年久失修，墙壁霉变剥落的房子；年老枯瘦依旧满面愁容的奶奶；年近七十依然紧闭大门外出劳作的外公外婆；满面风尘的舅舅，不沮丧也难。  </p>
+<p>对于词法分析语法分析完全没有概念的同学，可以先看看<a href="http://www.capsl.udel.edu/courses/cpeg421/2012/slides/Tutorial-Flex_Bison.pdf">这个 PDF</a> 了解一下，再读动物书会好一些，不然有些没头没脑。内容基本和书里的第一章重合，但简单介绍了一下 Flex ...</p>
+      <br>
+      <a class="btn" href="/zi-xue-zhi-nan-flex-bison.html#zi-xue-zhi-nan-flex-bison">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="/20161004.html#20161004">20161004</a></h2>
+    <p>
+          Posted on Tue 04 October 2016 in <a href="/category/shen-ye-ji-tang.html">深夜鸡汤</a>
+
+
+
+    </p>
+  </header>
+  <div>
+      <p>大半夜的睡不着。一半是因为老家秋天的蚊子，大个，嗡嗡声能达数个分呗，一口一个大包；另一半还是每次回家都止不住的沮丧程序。看着年久失修，墙壁霉变剥落的房子；年老枯瘦依旧满面愁容的奶奶；年近七十依然紧闭大门外出劳作的外公外婆；满面风尘的舅舅，不沮丧也难。  </p>
 <p>想到车房妻子俱全的大哥，静待二哥结婚越活越年轻的姑父母，以及刚在上海买房的二哥，想想自己的工资与上海房价的比例，沮丧更胜之前。  </p>
 <p>就在几天前，还对寒茹谆谆教导：最重要的不是别人有什么，而是你自己想要什么。当自己遇到了同样的境地，却也还是忍不住涌起各种情绪。不论是因为别人拥有的生活之艰还是生活之幸。  </p>
 <p>熬了一个半夜，看完了《从你的全世界路过》。之前并没有了解过作者，只是最近电影上映，亚马逊的 kindle 包月服务又能免费借阅，乘着家里没网，随便读读。也许是很久没有读这样的文字了，侨情的情绪弥漫到每个毛孔，又说不清楚侨情什么。现在，我已经完全记不得书里的任何一个故事了，只有那种情绪转化成忧伤挥之不去，只能呓语。</p>
-<p>张嘉佳是幸福的，不论如何他还有故事有酒，他还有朋友，不管故事的真实度几分。我不会喝酒，也没有他那样的朋友。但我也是幸福的，父母俱在身体健康，有一个感情很好的女朋友 ...</p> </div><!-- /.entry-content -->
-        </article></li>
-        <li><article class="hentry">
-                <header> <h2 class="entry-title"><a href="/ran-shao-sheng-ming.html" rel="bookmark" title="Permalink to 燃烧生命">燃烧生命</a></h2> </header>
-                <footer class="post-info">
-                    <abbr class="published" title="2016-09-21T02:30:00+08:00"> Wed 21 September 2016 </abbr>
-                    <address class="vcard author">By
-                        <a class="url fn" href="/author/jswh.html">jswh</a>
-                    </address>
-                </footer><!-- /.post-info -->
-                <div class="entry-content"> <p>我一无所有，唯有生命，唯有燃烧生命。  </p>
+<p>张嘉佳是幸福的，不论如何他还有故事有酒，他还有朋友，不管故事的真实度几分。我不会喝酒，也没有他那样的朋友。但我也是幸福的，父母俱在身体健康，有一个感情很好的女朋友 ...</p>
+      <br>
+      <a class="btn" href="/20161004.html#20161004">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="/ran-shao-sheng-ming.html#ran-shao-sheng-ming">燃烧生命</a></h2>
+    <p>
+          Posted on Wed 21 September 2016 in <a href="/category/shen-ye-ji-tang.html">深夜鸡汤</a>
+
+
+
+    </p>
+  </header>
+  <div>
+      <p>我一无所有，唯有生命，唯有燃烧生命。  </p>
 <p>连续第三个晚上凌晨还不睡。因为连续几个晚上，机体开始适应，已经不在意太浓的睡意了，这是决定减少睡眠来争取更多时间的开始。现在早上还是很难起来，需要睡到至少10点。生物钟的不适应造成的身体痛苦还是很严重。也许还是要调整的一下时间，三点还是太晚，两点到六点才是一个普通人深睡眠最丰富的时间段。压缩睡眠时间到四个小时每天的计划还得有段适应的时间。  </p>
-<p>有人说，这是在拿命在换。是啊，那又如何。毕竟，想做的事那么多，而我又还年轻。毕竟，我一无所有，只有生命。  </p> </div><!-- /.entry-content -->
-        </article></li>
-        <li><article class="hentry">
-                <header> <h2 class="entry-title"><a href="/jswh-hui-jswh.html" rel="bookmark" title="Permalink to jswh 会 jswh">jswh 会 jswh</a></h2> </header>
-                <footer class="post-info">
-                    <abbr class="published" title="2016-07-10T04:12:00+08:00"> Sun 10 July 2016 </abbr>
-                    <address class="vcard author">By
-                        <a class="url fn" href="/author/jswh.html">jswh</a>
-                    </address>
-                </footer><!-- /.post-info -->
-                <div class="entry-content"> <p>乐空空上两个版本周期中，抛开所有业务上的事，把我自己认为乐空空在 Laravel 上应该改的基础架构都改了。在快接近尾声的时候，发现自己似乎已经没什么想要做的事了。这个时候已经开始焦虑了：我绝的乐空空应该还有还有很多事要做，为什么到这里就没事可做了呢？我的能力到头了或者这个产品目前到头了。刚好这时候版本开发出现了延误，闲而又闲之下就琢磨，越琢磨越觉得现在的开发流程有问题，但觉得自己不出在管理的职位上，并不应该去管理这些事情。一来感觉无事可做，而来对产品没信心，三来觉得无力改变现状，所以看待什么都很消极。</p>
+<p>有人说，这是在拿命在换。是啊，那又如何。毕竟，想做的事那么多，而我又还年轻。毕竟，我一无所有，只有生命。  </p>
+      <br>
+      <a class="btn" href="/ran-shao-sheng-ming.html#ran-shao-sheng-ming">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="/jswh-hui-jswh.html#jswh-hui-jswh">jswh 会 jswh</a></h2>
+    <p>
+          Posted on Sun 10 July 2016 in <a href="/category/shen-ye-ji-tang.html">深夜鸡汤</a>
+
+
+
+    </p>
+  </header>
+  <div>
+      <p>乐空空上两个版本周期中，抛开所有业务上的事，把我自己认为乐空空在 Laravel 上应该改的基础架构都改了。在快接近尾声的时候，发现自己似乎已经没什么想要做的事了。这个时候已经开始焦虑了：我绝的乐空空应该还有还有很多事要做，为什么到这里就没事可做了呢？我的能力到头了或者这个产品目前到头了。刚好这时候版本开发出现了延误，闲而又闲之下就琢磨，越琢磨越觉得现在的开发流程有问题，但觉得自己不出在管理的职位上，并不应该去管理这些事情。一来感觉无事可做，而来对产品没信心，三来觉得无力改变现状，所以看待什么都很消极。</p>
 <p>向前辈咨询，被领导谈话。经过各种各样的梳理和解压，脑子渐渐冷静下来。再次慢慢回想这些事情，确实整个团队是有一些问题，但出现那样的强烈的负面情绪，问题还是在自己身上。本质的原因还是对自己能力的怀疑。在有事可以忙碌的时候，精神专注在解决问题上，没有经历去考虑这些问题，但一旦闲下来，就会不停地想：我到底掌握了那些东西？掌握到多少程度？我到底可以解决多大程度问题？我解决的问题到底价值几何？我到底价值几何？</p>
 <p>有这些疑问的原因其实一直都很清楚。第一，我一直耿耿于怀自己非专业的出生，觉得自己在很多基础的问题上掌握不好；第二，在没有考试和分数之后，已经失去了对自己能力的衡量方式。问题很明确，但是一直都没有很明确的办法。</p>
-<p>也做过很多目的并不明确的尝试。比如做很多个人项目 ...</p> </div><!-- /.entry-content -->
-        </article></li>
-        <li><article class="hentry">
-                <header> <h2 class="entry-title"><a href="/wei-shi-yao-xie-bo-ke.html" rel="bookmark" title="Permalink to 为什么写博客">为什么写博客</a></h2> </header>
-                <footer class="post-info">
-                    <abbr class="published" title="2016-07-01T06:00:00+08:00"> Fri 01 July 2016 </abbr>
-                    <address class="vcard author">By
-                        <a class="url fn" href="/author/jswh.html">jswh</a>
-                    </address>
-                </footer><!-- /.post-info -->
-                <div class="entry-content"> <p>凌晨四点不睡觉，大概是觉得自己还有该做的事没有做完。毕竟这对与我来可能会是一个影响较大的决定。</p>
+<p>也做过很多目的并不明确的尝试。比如做很多个人项目 ...</p>
+      <br>
+      <a class="btn" href="/jswh-hui-jswh.html#jswh-hui-jswh">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="/wei-shi-yao-xie-bo-ke.html#wei-shi-yao-xie-bo-ke">为什么写博客</a></h2>
+    <p>
+          Posted on Fri 01 July 2016 in <a href="/category/shen-ye-ji-tang.html">深夜鸡汤</a>
+
+
+
+    </p>
+  </header>
+  <div>
+      <p>凌晨四点不睡觉，大概是觉得自己还有该做的事没有做完。毕竟这对与我来可能会是一个影响较大的决定。</p>
 <h3>目的驱动的人</h3>
 <p>一直都认为自己是一个强烈的目的驱动的人。如果做一件事而不知道为什么便无法投入，也就无法坚持并做好。<br />
 所以每当自己决定要做一件事情的时候，就要为这件事找一个意义出来。然而，今天仔细思考目的和作用的区别时候，才醒悟为什么很多自认明明很有意义的事情，却总是没法好好坚持下来。<br />
@@ -86,30 +175,71 @@
 想清楚目的时候，写博客便只是一种手段了。我希望把自己的所思所想归档，这是我的目的，而写博客只是达成目的的一种手段。因为是对目的保持的注意力，写博客本身便不会成为一种煎熬。  </p>
 <h3>直面内心的阴暗</h3>
 <p>但是很多时候，做一件的目的是不纯的。每当此时，就会给自己一个冠冕堂皇的理由。而这个理由又往往是从作用挑拣出来的好的部分。再次达到自欺欺人的目的。<br />
-还是写博客这件事。我知道确实有很多人写博客仅仅是为了记录，但如<a href="http://jswh.me/#/single/docs/高速缓冲存储器/输入与输出.md">上一篇</a>所述 ...</p> </div><!-- /.entry-content -->
-        </article></li>
-        <li><article class="hentry">
-                <header> <h2 class="entry-title"><a href="/shu-ru-yu-shu-chu.html" rel="bookmark" title="Permalink to 输入与输出">输入与输出</a></h2> </header>
-                <footer class="post-info">
-                    <abbr class="published" title="2016-06-15T22:00:00+08:00"> Wed 15 June 2016 </abbr>
-                    <address class="vcard author">By
-                        <a class="url fn" href="/author/jswh.html">jswh</a>
-                    </address>
-                </footer><!-- /.post-info -->
-                <div class="entry-content"> <p>最近一直在思考关于信息的输入与输出的问题。  </p>
+还是写博客这件事。我知道确实有很多人写博客仅仅是为了记录，但如<a href="http://jswh.me/#/single/docs/高速缓冲存储器/输入与输出.md">上一篇</a>所述 ...</p>
+      <br>
+      <a class="btn" href="/wei-shi-yao-xie-bo-ke.html#wei-shi-yao-xie-bo-ke">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="/shu-ru-yu-shu-chu.html#shu-ru-yu-shu-chu">输入与输出</a></h2>
+    <p>
+          Posted on Wed 15 June 2016 in <a href="/category/shen-ye-ji-tang.html">深夜鸡汤</a>
+
+
+
+    </p>
+  </header>
+  <div>
+      <p>最近一直在思考关于信息的输入与输出的问题。  </p>
 <p>每天，我们都在接受大量的信息。以我自己来说，微信、微博、知乎这些碎片化的；书籍、教程，公开课，MOOC这些系统化的。并且，花在前者中的时间越来越多，在每天所获取的信息中占的比重越来越大。每天都在接受海量的信息，可是躺在床上睡不着的时候却总是无事可想。（也许也不错，越想越睡不着）  </p>
 <p>另一个感受就是无事可写。  </p>
 <p>我不喜欢用博客做笔记，尤其是把别人写过的东西再写一遍。复制粘贴然后当做自己的产出，那真是一件很无聊的事。文笔不好，所以也不喜欢写太多的随笔记录；个人习惯也不喜欢公开私人生活，所以几乎不写这类的博客。那么，写些什么呢。以前的内容通常都是思考和总结，读书然后化到自己的生活中，出现自己的体会，再慢慢地转化成思索，最后输出成文字。  </p>
 <p>而现在，我觉得没有什么可以写了。有的时候会有一些简短的思索出现，但是能成型的文字，通常仅仅足够发一个朋友圈，再多也没有了。碎片化的输入，导致了碎片化的输出。  </p>
-<p>在我的观念中，信息的输出是输入知识化的体现。所谓知识化，就是指经过个人对输入的信息经过加工，形成可以传递下去的经验或见解。而其中又可分整理型的和创造型的输出。而碎片化输入的零星内容，在没有相关的知识背景的情况下很难作为归纳总结的对象 ...</p> </div><!-- /.entry-content -->
-        </article></li>
-</ol><!-- /#posts-list -->
-</section><!-- /#content -->
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
-                which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-        </footer><!-- /#contentinfo -->
+<p>在我的观念中，信息的输出是输入知识化的体现。所谓知识化，就是指经过个人对输入的信息经过加工，形成可以传递下去的经验或见解。而其中又可分整理型的和创造型的输出。而碎片化输入的零星内容，在没有相关的知识背景的情况下很难作为归纳总结的对象 ...</p>
+      <br>
+      <a class="btn" href="/shu-ru-yu-shu-chu.html#shu-ru-yu-shu-chu">    Continue reading
+</a>
+  </div>
+</article>
+
+  <div class="pagination">
+  </div>
+
+    <footer>
+<p>
+  &copy; jswh 2018 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Mirror Lake ",
+  "url" : "",
+  "image": "http://cdn.jswh.me/6405755.jpeg",
+  "description": ""
+}
+</script>
 </body>
 </html>
