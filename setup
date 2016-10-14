@@ -2,4 +2,4 @@ virtualenv --no-site-packages $PWD
 source $PWD/bin/activate
 pip install pelican markdown ghp-import six
 echo "symlink install theme $PWD/Flex"
-sudo pelican-themes -s $PWD/Flex
+pelican-themes -s $PWD/Flex
