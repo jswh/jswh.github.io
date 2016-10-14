@@ -17,7 +17,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Github', 'https://github.com/jswh/'),('Wiki', "http://wiki.jswh.me"))
+LINKS = (('Wiki', "http://wiki.jswh.me"))
 
 DEFAULT_PAGINATION = 15
 
@@ -26,7 +26,7 @@ DEFAULT_PAGINATION = 15
 
 THEME='Flex'
 
-AUTHOR = 'Jswh'
+AUTHOR = 'jswh'
 SITENAME = 'Mirror Lake'
 SITEURL = 'http://blog.jswh.me'
 RELATIVE_URLS = False
@@ -45,4 +45,7 @@ EXTRA_PATH_METADATA = {
 }
 #CUSTOM_CSS = 'static/custom.css'
 
-MAIN_MENU = True
+M46255117AIN_MENU = True
+
+SOCIAL = (('linkedin', 'http://www.linkedin.com/in/曹-维杰-a46255117'),
+          ('github', 'https://github.com/jswh'))
