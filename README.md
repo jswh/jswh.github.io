@@ -1,3 +1,5 @@
+#demo
+[Mirror Lake](http://blog.jswh.me/)
 # setup
 
 ## dependences
