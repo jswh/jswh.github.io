@@ -8,8 +8,7 @@
 
 ## steps
 	1. fork this repo, change the repo name to `$your_user_name.github.io`
-	2. in termianl, get into the repo directory，run `./setup`
-	windows user may follow the steps in file `setup`
+	2. in termianl, get into the repo directory，run `./setup`. windows user may follow the steps in file `setup`
 	3. change pelicanconf.py to your own blog information
 	4. run `./publish`, done
 # usage
