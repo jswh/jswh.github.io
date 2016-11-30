@@ -47,5 +47,7 @@ EXTRA_PATH_METADATA = {
 
 MAIN_MENU = True
 
+DUOSHUO_SITENAME = 'mirrorlake'
+
 SOCIAL = (('linkedin', 'http://www.linkedin.com/in/曹-维杰-a46255117'),
           ('github', 'https://github.com/jswh'))
