@@ -2,17 +2,16 @@
 [Mirror Lake](http://blog.jswh.me/)
 # setup
 ## dependences
-
-	1. git
-	2. python3
-	3. virtualenv
+1. git
+2. python3
+3. virtualenv
 
 ## steps
-	1. fork this repo, change the repo name to `$your_user_name.github.io`
-	2. in termianl, get into the repo directory，run `./setup`. windows user may follow the steps in file `setup`
-	3. change pelicanconf.py to your own blog information
-	4. set your own domain in `CNAME`(optional)
-	5. run `./publish`, done
+1. fork this repo, change the repo name to `$your_user_name.github.io`
+2. in termianl, get into the repo directory，run `./setup`. windows user may follow the steps in file `setup`
+3. change pelicanconf.py to your own blog information
+4. set your own domain in `CNAME`(optional)
+5. run `./publish`, done
 
 # usage
 ## add content
