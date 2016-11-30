@@ -1,19 +1,20 @@
-# 安装
-clone repo 到本地.执行 setup 文件安装。windows用户请自行参考 setup 文件内容安装相关依赖。等我有空把 setup 也改成 python 的脚本。
-# 使用
-## 编写文章
-文章添加请参考 [pelican](http://docs.getpelican.com/en/3.6.3/quickstart.html#create-an-article) 的手册。
-## 更新博客内容
-请在编写完你的文章之后或者修改博客设置之后，执行以下命令
+# setup
 
-	make github
+## dependences
 
-该命令会执行下述步骤
+	1. git
+	2. python3
+	3. virtualenv
 
-* 提交所有的更改
-* 将代码库内容推送到 github 的 pelican 分支
-* 生成博客内容
-* 将生成的博客内容推送到 github 的 master 分支
-
-如果需要添加自己的commit message 请手动进行 git 相关操作。
-
+## steps
+	1. fork this repo, change the repo name to `$your_user_name.github.io`
+	2. in termianl, get into the repo directory，run `./setup`
+	windows user may follow the steps in file `setup`
+	3. change pelicanconf.py to your own blog information
+	4. run `./publish`, done
+# usage
+## add content
+	Add content like `content.md` to `content` directory and execute `./publish`.
+## pelican
+The blog generator is [pelican](http://docs.getpelican.com/en/3.6.3/quickstart.html#create-an-article).
+You can change every thing as long as pelican support.The default theme is [Flex](https://github.com/alexandrevicenzi/Flex/tree/5bc235cf579cb03bcc8f54b6029ff74493a0cb44).
