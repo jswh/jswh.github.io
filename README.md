@@ -8,7 +8,7 @@
 
 ## steps
 1. fork this repo, change the repo name to `$your_user_name.github.io`
-2. in termianl, get into the repo directory，run `./setup`. windows user may follow the steps in file `setup`
+2. in terminal, get into the repo directory and run `./setup`. windows users may follow the steps in file `setup`
 3. change pelicanconf.py to your own blog information
 4. set your own domain in `CNAME`(optional)
 5. run `./publish`, done
