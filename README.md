@@ -8,14 +8,18 @@
 
 ## steps
 1. fork this repo, change the repo name to `$your_user_name.github.io`
-2. in terminal, get into the repo directory and run `./setup`. windows users may follow the steps in file `setup`
-3. change pelicanconf.py to your own blog information
+2. in terminal, get into the repo directory and run the setup script. 
+    * `setup` for *nix users
+    * `setup.bat` for windows users, and "run as administrator" is recommended
+3. change optios in `pelicanconf.py` to your own blog information
 4. set your own domain in `CNAME`(optional)
-5. run `./publish`, done
+5. execute the publish script, done
+    * `publish` for *nix users
+    * `publish.bat` for windows users
 
 # usage
 ## add content
-Add content like `content.md` to `content` directory and execute `./publish`.
+Add content like `content.md` to `content` directory and execute the publish script.
 
 ## pelican
 The blog generator is [pelican](http://docs.getpelican.com/en/3.6.3/quickstart.html#create-an-article).
