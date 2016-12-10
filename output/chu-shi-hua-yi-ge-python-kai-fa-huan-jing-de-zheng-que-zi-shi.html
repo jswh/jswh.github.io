@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="http://blog.jswh.me/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="http://blog.jswh.me/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="http://blog.jswh.me/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="http://blog.jswh.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Mirror Lake Atom">
+
+
+    <link rel="shortcut icon" href="http://cdn.jswh.me/6405755.jpeg" type="image/x-icon">
+    <link rel="icon" href="http://cdn.jswh.me/6405755.jpeg" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<meta name="author" content="jswh" />
+<meta name="description" content="在看这篇文章的时候，我需要两个假设，以避免做过多无关的解释。 1. 假设读者对 Python 有最基本的了解，知道如何使用 pip。并且系统环境中已经安装有 Python 和 pip。 2. 假设读者对 virtualenv 有最基本的了解，知道为什么要用 virtualenv。 如果假设不成立，可以跟随上面的链接和 Google 来了解。 0x1 更换 pypi 源为豆瓣的源 如果网络环境好的话这一步也可以不做 mkdir -p ~/.config/pip/ touch ~/.config/pip/pip.conf 在pip.conf 文件中添加以下内容 [global] timeout = 60 index-url = https://pypi.doubanio.com/simple/ 0x2 ..." />
+<meta name="keywords" content="">
+<meta property="og:site_name" content="Mirror Lake"/>
+<meta property="og:title" content="初始化一个 Python 开发环境的正确姿势"/>
+<meta property="og:description" content="在看这篇文章的时候，我需要两个假设，以避免做过多无关的解释。 1. 假设读者对 Python 有最基本的了解，知道如何使用 pip。并且系统环境中已经安装有 Python 和 pip。 2. 假设读者对 virtualenv 有最基本的了解，知道为什么要用 virtualenv。 如果假设不成立，可以跟随上面的链接和 Google 来了解。 0x1 更换 pypi 源为豆瓣的源 如果网络环境好的话这一步也可以不做 mkdir -p ~/.config/pip/ touch ~/.config/pip/pip.conf 在pip.conf 文件中添加以下内容 [global] timeout = 60 index-url = https://pypi.doubanio.com/simple/ 0x2 ..."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://blog.jswh.me/chu-shi-hua-yi-ge-python-kai-fa-huan-jing-de-zheng-que-zi-shi.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2016-07-01 06:00:00+08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://blog.jswh.me/author/jswh.html">
+<meta property="article:section" content="深夜鸡汤"/>
+<meta property="og:image" content="http://cdn.jswh.me/6405755.jpeg">
+
+  <title>Mirror Lake &ndash; 初始化一个 Python 开发环境的正确姿势</title>
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="http://blog.jswh.me">
+        <img src="http://cdn.jswh.me/6405755.jpeg" alt="Mirror Lake" title="Mirror Lake">
+      </a>
+      <h1><a href="http://blog.jswh.me">Mirror Lake</a></h1>
+
+<p>stay calm like a mirror lake......</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="http://wiki.jswh.me" target="_blank">Wiki</a></li>
+          <li><a href="http://resume.qmail.com/cwj/Hk9QbvSy4Kk" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-linkedin" href="http://www.linkedin.com/in/曹-维杰-a46255117" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/jswh" target="_blank"><i class="fa fa-github"></i></a></li>
+      </ul>
+    </div>
+  </aside>
+  <main>
+    <nav>
+      <a href="http://blog.jswh.me">    Home
+</a>
+
+
+      <a href="http://blog.jswh.me/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+    <h1 id="chu-shi-hua-yi-ge-python-kai-fa-huan-jing-de-zheng-que-zi-shi">初始化一个 Python 开发环境的正确姿势</h1>
+    <p>
+          Posted on Fri 01 July 2016 in <a href="http://blog.jswh.me/category/shen-ye-ji-tang.html">深夜鸡汤</a>
+
+
+    </p>
+  </header>
+  <div>
+    <p>在看这篇文章的时候，我需要两个假设，以避免做过多无关的解释。
+1. 假设读者对 <a href="https://www.python.org/downloads/">Python</a> 有最基本的了解，知道如何使用 <a href="https://pip.pypa.io/en/stable/installing/">pip</a>。并且系统环境中已经安装有 Python 和 pip。
+2. 假设读者对 <a href="http://docs.python-guide.org/en/latest/dev/virtualenvs/">virtualenv</a> 有最基本的了解，知道为什么要用 virtualenv。</p>
+<p>如果假设不成立，可以跟随上面的链接和 Google 来了解。</p>
+<h2>0x1 更换 pypi 源为豆瓣的源</h2>
+<p>如果网络环境好的话这一步也可以不做</p>
+<div class="highlight"><pre><span></span>mkdir -p ~/.config/pip/
+touch ~/.config/pip/pip.conf
+</pre></div>
+
+
+<p>在pip.conf 文件中添加以下内容</p>
+<div class="highlight"><pre><span></span><span class="k">[global]</span>
+<span class="na">timeout</span> <span class="o">=</span> <span class="s">60</span>
+<span class="na">index-url</span> <span class="o">=</span> <span class="s">https://pypi.doubanio.com/simple/</span>
+</pre></div>
+
+
+<h2>0x2 安装 virtualenv</h2>
+<div class="highlight"><pre><span></span>pip install virtualenv
+</pre></div>
+
+
+<h2>0x3 使用 vritualenv 初始化应用目录</h2>
+<div class="highlight"><pre><span></span>virtualenv path/to/your/app/folder/
+source path/to/your/app/folder/bin/activate # 激活环境
+</pre></div>
+
+
+<p>virtualenv 初始化的时候可以有多种基本Python的环境选择。新版本默认是不会带上site-packages的干净环境。</p>
+<h2>0x4 安装依赖</h2>
+<p>比如 Flask </p>
+<div class="highlight"><pre><span></span>pip install flask
+</pre></div>
+
+
+<p>或者如果有<code>requirements.txt</code>的话</p>
+<div class="highlight"><pre><span></span>pip install -r requirements.txt
+</pre></div>
+
+
+<h2>0x5 把 virtualenv 环境导入编辑器/IDE</h2>
+<p>这里仅以 VSCode 为例。先安装 <a href="https://code.visualstudio.com/docs/languages/python">python 的语言插件</a>，然后编辑 <a href="https://code.visualstudio.com/docs/customization/userandworkspace">workerspace settings</a>
+增加以下内容</p>
+<div class="highlight"><pre><span></span>&quot;python.autoComplete.extraPaths&quot;: [
+    &quot;path/to/your/app/folder/lib&quot;
+],
+&quot;python.pythonPath&quot;:&quot;path/to/your/app/folder/bin/python&quot;
+</pre></div>
+
+
+<p>之后就可以愉快的使用了。</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+    </p>
+  </div>
+
+
+
+<div class="ds-thread" data-thread-key="chu-shi-hua-yi-ge-python-kai-fa-huan-jing-de-zheng-que-zi-shi" data-title="初始化一个 Python 开发环境的正确姿势" data-url="http://blog.jswh.me/chu-shi-hua-yi-ge-python-kai-fa-huan-jing-de-zheng-que-zi-shi.html"></div>
+<script type="text/javascript">
+
+    var duoshuoQuery = {short_name:'mirrorlake'};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+</article>
+
+    <footer>
+<p>
+  &copy; jswh 2018 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Mirror Lake ",
+  "url" : "http://blog.jswh.me",
+  "image": "http://cdn.jswh.me/6405755.jpeg",
+  "description": ""
+}
+</script>
+</body>
+</html>

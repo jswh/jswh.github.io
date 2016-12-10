@@ -18,7 +18,58 @@
 &lt;p&gt;现在是工作两个，我希望在我工作三年的时候，以上的两个问题都不在是问题，也就是给自己一年时间来解决这些问题。&lt;/p&gt;
 &lt;p&gt;不在开新的个人项目，原来的项目该放弃放弃，可以完善的完善但是尽快阶段性结束，不在考虑自己的框架之类虚无缥缈的事。有任何的主意可以记着，可以写成类似项目规划的东西防止忘记。认真学习自己认为应该补习的东西，做好练习题，练习题就是衡量。刷 LeetCode, 这真的是最直接的能力衡量了。&lt;/p&gt;
 &lt;p&gt;需要加强工作的总结。这一点其实挺重要的，毕竟生活中大部分时间都在工作。如果说要明确自己能力，也许可以列出自己曾经解决过什么样的问题如何解决的是最具说服力的了。可以用文章的形式写出来，也可用代码的形式的来表述。程序员么，还是 show me the code。&lt;/p&gt;
-&lt;p&gt;愿自己如网名 jswh 原本的意义一样，平静而底蕴深厚，宠辱不惊。&lt;/p&gt;</summary></entry><entry><title>为什么写博客</title><link href="http://blog.jswh.me/wei-shi-yao-xie-bo-ke.html" rel="alternate"></link><published>2016-07-01T06:00:00+08:00</published><updated>2016-07-01T06:00:00+08:00</updated><author><name>jswh</name></author><id>tag:blog.jswh.me,2016-07-01:wei-shi-yao-xie-bo-ke.html</id><summary type="html">&lt;p&gt;凌晨四点不睡觉，大概是觉得自己还有该做的事没有做完。毕竟这对与我来可能会是一个影响较大的决定。&lt;/p&gt;
+&lt;p&gt;愿自己如网名 jswh 原本的意义一样，平静而底蕴深厚，宠辱不惊。&lt;/p&gt;</summary></entry><entry><title>初始化一个 Python 开发环境的正确姿势</title><link href="http://blog.jswh.me/chu-shi-hua-yi-ge-python-kai-fa-huan-jing-de-zheng-que-zi-shi.html" rel="alternate"></link><published>2016-07-01T06:00:00+08:00</published><updated>2016-07-01T06:00:00+08:00</updated><author><name>jswh</name></author><id>tag:blog.jswh.me,2016-07-01:chu-shi-hua-yi-ge-python-kai-fa-huan-jing-de-zheng-que-zi-shi.html</id><summary type="html">&lt;p&gt;在看这篇文章的时候，我需要两个假设，以避免做过多无关的解释。
+1. 假设读者对 &lt;a href="https://www.python.org/downloads/"&gt;Python&lt;/a&gt; 有最基本的了解，知道如何使用 &lt;a href="https://pip.pypa.io/en/stable/installing/"&gt;pip&lt;/a&gt;。并且系统环境中已经安装有 Python 和 pip。
+2. 假设读者对 &lt;a href="http://docs.python-guide.org/en/latest/dev/virtualenvs/"&gt;virtualenv&lt;/a&gt; 有最基本的了解，知道为什么要用 virtualenv。&lt;/p&gt;
+&lt;p&gt;如果假设不成立，可以跟随上面的链接和 Google 来了解。&lt;/p&gt;
+&lt;h2&gt;0x1 更换 pypi 源为豆瓣的源&lt;/h2&gt;
+&lt;p&gt;如果网络环境好的话这一步也可以不做&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mkdir -p ~/.config/pip/
+touch ~/.config/pip/pip.conf
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;在pip.conf 文件中添加以下内容&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[global]&lt;/span&gt;
+&lt;span class="na"&gt;timeout&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;60&lt;/span&gt;
+&lt;span class="na"&gt;index-url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;https://pypi.doubanio.com/simple/&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;0x2 安装 virtualenv&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install virtualenv
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;0x3 使用 vritualenv 初始化应用目录&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;virtualenv path/to/your/app/folder/
+source path/to/your/app/folder/bin/activate # 激活环境
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;virtualenv 初始化的时候可以有多种基本Python的环境选择。新版本默认是不会带上site-packages的干净环境。&lt;/p&gt;
+&lt;h2&gt;0x4 安装依赖&lt;/h2&gt;
+&lt;p&gt;比如 Flask &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install flask
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;或者如果有&lt;code&gt;requirements.txt&lt;/code&gt;的话&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install -r requirements.txt
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;0x5 把 virtualenv 环境导入编辑器/IDE&lt;/h2&gt;
+&lt;p&gt;这里仅以 VSCode 为例。先安装 &lt;a href="https://code.visualstudio.com/docs/languages/python"&gt;python 的语言插件&lt;/a&gt;，然后编辑 &lt;a href="https://code.visualstudio.com/docs/customization/userandworkspace"&gt;workerspace settings&lt;/a&gt;
+增加以下内容&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;quot;python.autoComplete.extraPaths&amp;quot;: [
+    &amp;quot;path/to/your/app/folder/lib&amp;quot;
+],
+&amp;quot;python.pythonPath&amp;quot;:&amp;quot;path/to/your/app/folder/bin/python&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;之后就可以愉快的使用了。&lt;/p&gt;</summary></entry><entry><title>为什么写博客</title><link href="http://blog.jswh.me/wei-shi-yao-xie-bo-ke.html" rel="alternate"></link><published>2016-07-01T06:00:00+08:00</published><updated>2016-07-01T06:00:00+08:00</updated><author><name>jswh</name></author><id>tag:blog.jswh.me,2016-07-01:wei-shi-yao-xie-bo-ke.html</id><summary type="html">&lt;p&gt;凌晨四点不睡觉，大概是觉得自己还有该做的事没有做完。毕竟这对与我来可能会是一个影响较大的决定。&lt;/p&gt;
 &lt;h3&gt;目的驱动的人&lt;/h3&gt;
 &lt;p&gt;一直都认为自己是一个强烈的目的驱动的人。如果做一件事而不知道为什么便无法投入，也就无法坚持并做好。&lt;br /&gt;
 所以每当自己决定要做一件事情的时候，就要为这件事找一个意义出来。然而，今天仔细思考目的和作用的区别时候，才醒悟为什么很多自认明明很有意义的事情，却总是没法好好坚持下来。&lt;br /&gt;

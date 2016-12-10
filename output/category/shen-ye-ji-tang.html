@@ -142,6 +142,42 @@
 </article>
 <article>
   <header>
+    <h2><a href="http://blog.jswh.me/chu-shi-hua-yi-ge-python-kai-fa-huan-jing-de-zheng-que-zi-shi.html#chu-shi-hua-yi-ge-python-kai-fa-huan-jing-de-zheng-que-zi-shi">初始化一个 Python 开发环境的正确姿势</a></h2>
+    <p>
+          Posted on Fri 01 July 2016 in <a href="http://blog.jswh.me/category/shen-ye-ji-tang.html">深夜鸡汤</a>
+
+
+
+    </p>
+  </header>
+  <div>
+      <p>在看这篇文章的时候，我需要两个假设，以避免做过多无关的解释。
+1. 假设读者对 <a href="https://www.python.org/downloads/">Python</a> 有最基本的了解，知道如何使用 <a href="https://pip.pypa.io/en/stable/installing/">pip</a>。并且系统环境中已经安装有 Python 和 pip。
+2. 假设读者对 <a href="http://docs.python-guide.org/en/latest/dev/virtualenvs/">virtualenv</a> 有最基本的了解，知道为什么要用 virtualenv。</p>
+<p>如果假设不成立，可以跟随上面的链接和 Google 来了解。</p>
+<h2>0x1 更换 pypi 源为豆瓣的源</h2>
+<p>如果网络环境好的话这一步也可以不做</p>
+<div class="highlight"><pre><span></span>mkdir -p ~/.config/pip/
+touch ~/.config/pip/pip.conf
+</pre></div>
+
+
+<p>在pip.conf 文件中添加以下内容</p>
+<div class="highlight"><pre><span></span><span class="k">[global]</span>
+<span class="na">timeout</span> <span class="o">=</span> <span class="s">60</span>
+<span class="na">index-url</span> <span class="o">=</span> <span class="s">https://pypi.doubanio.com/simple/</span>
+</pre></div>
+
+
+<h2>0x2 ...</h2>
+      <br>
+      <a class="btn" href="http://blog.jswh.me/chu-shi-hua-yi-ge-python-kai-fa-huan-jing-de-zheng-que-zi-shi.html#chu-shi-hua-yi-ge-python-kai-fa-huan-jing-de-zheng-que-zi-shi">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://blog.jswh.me/wei-shi-yao-xie-bo-ke.html#wei-shi-yao-xie-bo-ke">为什么写博客</a></h2>
     <p>
           Posted on Fri 01 July 2016 in <a href="http://blog.jswh.me/category/shen-ye-ji-tang.html">深夜鸡汤</a>
