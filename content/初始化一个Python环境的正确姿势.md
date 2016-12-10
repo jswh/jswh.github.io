@@ -1,6 +1,6 @@
 Title: 初始化一个 Python 开发环境的正确姿势
 Date: 2016-12-10 17:41
-Category: 深夜鸡汤
+Category: 一点记录
 
 在看这篇文章的时候，我需要两个假设，以避免做过多无关的解释。
 1. 假设读者对 [Python](https://www.python.org/downloads/) 有最基本的了解，知道如何使用 [pip](https://pip.pypa.io/en/stable/installing/)。并且系统环境中已经安装有 Python 和 pip。
