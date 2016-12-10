@@ -4,6 +4,6 @@ git add .
 git commit -a -m "write article"
 git push origin pelican
 cp %CDIR%\CNAME %CDIR%\output\CNAME
-python %CDIR%\ghp-win -m "Generate Pelican site" -b master %CDIR%\output
+python %CDIR%\ghp-win.py -m "Generate Pelican site" -b master %CDIR%\output
 git push origin master
 pause
