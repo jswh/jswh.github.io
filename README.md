@@ -11,7 +11,7 @@
 2. in terminal, get into the repo directory and run the setup script. 
     * `setup` for *nix users
     * `setup.bat` for windows users, and "run as administrator" is recommended
-3. change optios in `pelicanconf.py` to your own blog information
+3. change options in `pelicanconf.py` to your own blog information
 4. set your own domain in `CNAME`(optional)
 5. execute the publish script, done
     * `publish` for *nix users
@@ -23,4 +23,4 @@ Add content like `content.md` to `content` directory and execute the publish scr
 
 ## pelican
 The blog generator is [pelican](http://docs.getpelican.com/en/3.6.3/quickstart.html#create-an-article).
-You can change every thing as long as pelican support.The default theme is [Flex](https://github.com/alexandrevicenzi/Flex/tree/5bc235cf579cb03bcc8f54b6029ff74493a0cb44).
+You can change every thing as long as pelican supported.The default theme is [Flex](https://github.com/alexandrevicenzi/Flex/tree/5bc235cf579cb03bcc8f54b6029ff74493a0cb44).`
