@@ -1,4 +1,5 @@
 git clone https://github.com/jswh/Flex.git Flex
+pip install vritualenv
 virtualenv -p python3 --no-site-packages $PWD
 source $PWD/bin/activate
 pip install pelican markdown ghp-import six
