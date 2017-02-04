@@ -10,3 +10,4 @@ Scripts
 tcl
 output
 __pycache__
+.vscode
