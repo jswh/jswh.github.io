@@ -2,9 +2,8 @@
 [Mirror Lake](http://blog.jswh.me/)
 # setup
 ## dependences
-1. git
-2. python3
-3. virtualenv
+1. [git](https://git-scm.com/)
+2. [python3](https://www.python.org/downloads/)
 
 ## steps
 1. fork this repo, change the repo name to `$your_user_name.github.io`
