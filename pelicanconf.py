@@ -54,3 +54,6 @@ SOCIAL = (('linkedin', 'http://www.linkedin.com/in/曹-维杰-a46255117'),
 MENUITEMS = (('Archives', '/archives.html'),
              ('Categories', '/categories.html')
             )
+
+GITHUB_CORNER_URL = "https://github.com/jswh/jswh.github.io"
+JINJA_ENVIRONMENT = {'extensions': []}
