@@ -17,7 +17,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Wiki', "http://wiki.jswh.me"),('Resume', 'http://resume.qmail.com/cwj/Hk9QbvSy4Kk'))
+LINKS = (('home', "http://home.jswh.me"),)
 
 DEFAULT_PAGINATION = 15
 
@@ -47,7 +47,7 @@ EXTRA_PATH_METADATA = {
 
 MAIN_MENU = True
 
-DUOSHUO_SITENAME = 'mirrorlake'
+WANGYI_PRODUCT_KEY = "30a98b264fda423da5e9351f43699b51"
 
 SOCIAL = (('linkedin', 'http://www.linkedin.com/in/曹-维杰-a46255117'),
           ('github', 'https://github.com/jswh'))
