@@ -1,6 +1,7 @@
 Title: 初始化一个 Python 开发环境的正确姿势
 Date: 2016-12-10 17:41
 Category: 编程实践
+Tags: python,virtualenv
 
 在看这篇文章的时候，我需要两个假设，以避免做过多无关的解释。
 
