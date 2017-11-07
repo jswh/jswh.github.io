@@ -50,7 +50,8 @@ SOCIAL = (('linkedin', 'http://www.linkedin.com/in/曹-维杰-a46255117'),
           ('github', 'https://github.com/jswh'))
 
 MENUITEMS = (('Archives', '/archives.html'),
-             ('Categories', '/categories.html')
+             ('Categories', '/categories.html'),
+             ('Tags', '/tags.html')
             )
 
 GITHUB_CORNER_URL = "https://github.com/jswh/jswh.github.io"
