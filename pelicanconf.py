@@ -27,7 +27,7 @@ THEME='Flex'
 
 AUTHOR = 'jswh'
 SITENAME = 'Mirror Lake'
-SITEURL = 'http://blog.jswh.me'
+SITEURL = 'https://blog.jswh.me'
 RELATIVE_URLS = False
 SITETITLE = 'Mirror Lake'
 SITESUBTITLE = 'stay calm like a mirror lake......'
@@ -46,8 +46,6 @@ EXTRA_PATH_METADATA = {
 
 MAIN_MENU = True
 
-WANGYI_PRODUCT_KEY = "30a98b264fda423da5e9351f43699b51"
-
 SOCIAL = (('linkedin', 'http://www.linkedin.com/in/曹-维杰-a46255117'),
           ('github', 'https://github.com/jswh'))
 
@@ -57,3 +55,4 @@ MENUITEMS = (('Archives', '/archives.html'),
 
 GITHUB_CORNER_URL = "https://github.com/jswh/jswh.github.io"
 JINJA_ENVIRONMENT = {'extensions': []}
+GOOGLE_ANALYTICS = 'UA-58830058-1'
