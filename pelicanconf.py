@@ -27,7 +27,7 @@ THEME='Flex'
 
 AUTHOR = 'jswh'
 SITENAME = 'Mirror Lake'
-SITEURL = 'http://blog.jswh.me'
+SITEURL = '/'
 RELATIVE_URLS = False
 SITETITLE = 'Mirror Lake'
 SITESUBTITLE = 'stay calm like a mirror lake......'
