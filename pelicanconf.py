@@ -57,3 +57,5 @@ MENUITEMS = (('Archives', '/archives.html'),
 GITHUB_CORNER_URL = "https://github.com/jswh/jswh.github.io"
 JINJA_ENVIRONMENT = {'extensions': []}
 GOOGLE_ANALYTICS = 'UA-58830058-1'
+CHANGYAN_APP_ID = 'icytm8uooo'
+CHANGYAN_APP_CONF = 'prod_8f0fdacdbce8936c4f8c28f5b8f5b56f'
