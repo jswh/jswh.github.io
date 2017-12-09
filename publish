@@ -1,3 +1,5 @@
-source $PWD/bin/activate
+#!/bin/bash
+DIR=$(readlink -f $PWD)
+source $DIR/bin/activate
 python -V
 make github

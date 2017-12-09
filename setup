@@ -1,7 +1,10 @@
-git clone https://github.com/alexandrevicenzi/Flex.git Flex
+#!/bin/bash
+DIR=$(readlink -f $PWD)
+echo $DIR
+git clone https://github.com/jswh/Flex.git Flex
 pip install virtualenv
-virtualenv -p python3 --no-site-packages $PWD
-source $PWD/bin/activate
+virtualenv -p python3 --no-site-packages $DIR
+source $DIR/bin/activate
 pip install pelican markdown ghp-import six
-echo "symlink install theme $PWD/Flex"
-pelican-themes -s $PWD/Flex
+echo "symlink install theme $DIR/Flex"
+pelican-themes -s $DIR/Flex
