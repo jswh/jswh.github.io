@@ -19,7 +19,7 @@ AUTHOR_FEED_RSS = None
 LINKS = (('home', "http://home.jswh.me"),)
 
 DEFAULT_PAGINATION = 15
-
+DEFAULT_DATE = 'fs'
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 

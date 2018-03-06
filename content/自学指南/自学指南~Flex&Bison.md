@@ -1,6 +1,5 @@
 title: 自学指南 Flex & Bison
 Date: 2016-10-12 09:33
-Category: 自学指南
 
 因为公司在用 phalcon，这种 c 扩展的框架 IDE 没有办法补全，所以想写一个把 zephir 转译成 PHP IDE Helper 的东西。本来想直接 Reflection 取一下类信息就好了，奈何最终效果不理想，本来 [Zephir](https://zephir-lang.com/) 中有的很多信息都丢掉了，注释也全部没有。所以还是要用 passer 转译。  
 

@@ -1,6 +1,5 @@
 title: 最好的 Linux 发行版  
 Date: 2017-12-10 11:24  
-Category: Linux 漫谈
 Tags: Linux, WSL, Winsows, Subsystem
 标题是个玩笑话。
 
