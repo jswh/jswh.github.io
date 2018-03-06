@@ -33,6 +33,7 @@ SITETITLE = 'Mirror Lake'
 SITESUBTITLE = 'stay calm like a mirror lake......'
 SITELOGO = 'http://cdn.jswh.me/6405755.jpeg'
 BROWSER_COLOR = '#333'
+DISPLAY_CATEGORIES_ON_MENU = True
 
 FAVICON = 'http://cdn.jswh.me/6405755.jpeg'
 ROBOTS = 'index, follow'
