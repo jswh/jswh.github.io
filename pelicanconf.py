@@ -36,11 +36,6 @@ LINKS = (('个人主页', "http://home.jswh.me"),)
 SOCIAL = (('linkedin', 'http://www.linkedin.com/in/曹-维杰-a46255117'),
           ('github', 'https://github.com/jswh'))
 
-MENUITEMS = (('归档', '/archives.html'),
-             ('分类', '/categories.html'),
-             ('标签', '/tags.html')
-            )
-
 CUSTOM_CSS = 'static/custom.css'
 
 GITHUB_CORNER_URL = "https://github.com/jswh/jswh.github.io"
