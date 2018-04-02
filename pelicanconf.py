@@ -7,12 +7,12 @@ PATH = 'content'
 TIMEZONE = 'Asia/Shanghai'
 
 # Translate
-DEFAULT_LANG = 'zh'
+DEFAULT_LANG = 'zh_CN'
 OG_LOCALE = 'zh_CN'
 LOCALE = 'zh_CN'
 
 # Default theme language.
-I18N_TEMPLATES_LANG = 'zh'
+I18N_TEMPLATES_LANG = 'zh_CN'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -56,11 +56,11 @@ MAIN_MENU = True
 SOCIAL = (('linkedin', 'http://www.linkedin.com/in/曹-维杰-a46255117'),
           ('github', 'https://github.com/jswh'))
 
-MENUITEMS = (('Archives', '/archives.html'),
-             ('Categories', '/categories.html'),
-             ('Tags', '/tags.html')
+MENUITEMS = (('归档', '/archives.html'),
+             ('分类', '/categories.html'),
+             ('标签', '/tags.html')
             )
-
+CUSTOM_CSS = 'static/custom.css'
 GITHUB_CORNER_URL = "https://github.com/jswh/jswh.github.io"
 JINJA_ENVIRONMENT = {'extensions': []}
 GOOGLE_ANALYTICS = 'UA-58830058-1'
