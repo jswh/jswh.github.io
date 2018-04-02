@@ -14,15 +14,8 @@ LOCALE = 'zh_CN'
 # Default theme language.
 I18N_TEMPLATES_LANG = 'zh_CN'
 
-# Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
-CATEGORY_FEED_ATOM = None
-TRANSLATION_FEED_ATOM = None
-AUTHOR_FEED_ATOM = None
-AUTHOR_FEED_RSS = None
-
 # Blogroll
-LINKS = (('home', "http://home.jswh.me"),)
+LINKS = (('Jswh', "http://home.jswh.me"),)
 
 DEFAULT_PAGINATION = 15
 DEFAULT_DATE = 'fs'
