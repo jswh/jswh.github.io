@@ -6,5 +6,5 @@ virtualenv -p %Python% --no-site-packages %CDIR%
 call %CDIR%\Scripts\activate.bat
 pip install -i https://pypi.doubanio.com/simple/ pelican markdown ghp-import six
 pelican-themes -s %CDIR%\Flex
-git clone --recursive https://github.com/getpelican/pelican-plugins %CDIR%\plugins
+git clone https://github.com/getpelican/pelican-plugins %CDIR%\plugins
 pause
