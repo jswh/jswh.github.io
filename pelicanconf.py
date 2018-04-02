@@ -8,6 +8,7 @@ TIMEZONE = 'Asia/Shanghai'
 
 DEFAULT_PAGINATION = 15
 DEFAULT_DATE = 'fs'
+DEFAULT_DATE_FORMAT = '%a %d %B %Y'
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
@@ -51,7 +52,6 @@ LOCALE = 'zh_CN'
 
 # Default theme language.
 I18N_TEMPLATES_LANG = 'zh_CN'
-
 
 # Enable i18n plugin, probably you already have some others here.
 PLUGIN_PATHS = ["plugins"]
