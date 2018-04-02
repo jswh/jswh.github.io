@@ -8,7 +8,7 @@ TIMEZONE = 'Asia/Shanghai'
 
 DEFAULT_PAGINATION = 15
 DEFAULT_DATE = 'fs'
-DEFAULT_DATE_FORMAT = '%Y/%m/%d %H'
+DEFAULT_DATE_FORMAT = '%Y/%m/%d %H:%M:%S'
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
