@@ -30,7 +30,7 @@ COPYRIGHT_YEAR = 2018
 CC_LICENSE = { 'name': 'Creative Commons Attribution-ShareAlike', 'version':'4.0', 'slug': 'by-sa' }
 
 MAIN_MENU = True
-
+MAIN_MENU_CATEGORY = True
 LINKS = (('个人主页', "http://home.jswh.me"),)
 
 SOCIAL = (('linkedin', 'http://www.linkedin.com/in/曹-维杰-a46255117'),
