@@ -6,15 +6,6 @@ PATH = 'content'
 
 TIMEZONE = 'Asia/Shanghai'
 
-# Translate
-DEFAULT_LANG = 'zh_CN'
-OG_LOCALE = 'zh_CN'
-LOCALE = 'zh_CN'
-
-# Default theme language.
-I18N_TEMPLATES_LANG = 'zh_CN'
-
-
 DEFAULT_PAGINATION = 15
 DEFAULT_DATE = 'fs'
 # Uncomment following line if you want document-relative URLs when developing
@@ -40,7 +31,7 @@ CC_LICENSE = { 'name': 'Creative Commons Attribution-ShareAlike', 'version':'4.0
 
 MAIN_MENU = True
 
-LINKS = (('主页', "http://home.jswh.me"),)
+LINKS = (('个人主页', "http://home.jswh.me"),)
 
 SOCIAL = (('linkedin', 'http://www.linkedin.com/in/曹-维杰-a46255117'),
           ('github', 'https://github.com/jswh'))
@@ -57,3 +48,18 @@ JINJA_ENVIRONMENT = {'extensions': []}
 GOOGLE_ANALYTICS = 'UA-58830058-1'
 CHANGYAN_APP_ID = 'icytm8uooo'
 CHANGYAN_APP_CONF = 'prod_8f0fdacdbce8936c4f8c28f5b8f5b56f'
+
+# Translate
+DEFAULT_LANG = 'zh_CN'
+OG_LOCALE = 'zh_CN'
+LOCALE = 'zh_CN'
+
+# Default theme language.
+I18N_TEMPLATES_LANG = 'zh_CN'
+
+
+# Enable i18n plugin, probably you already have some others here.
+PLUGIN_PATHS = ["plugins"]
+PLUGINS = ['i18n_subsites']
+# Enable Jinja2 i18n extension used to parse translations.
+JINJA_EXTENSIONS = ['jinja2.ext.i18n']

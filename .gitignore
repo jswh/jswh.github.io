@@ -11,3 +11,4 @@ tcl
 output
 __pycache__
 .vscode
+plugins
