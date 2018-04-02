@@ -6,7 +6,13 @@ PATH = 'content'
 
 TIMEZONE = 'Asia/Shanghai'
 
+# Translate
 DEFAULT_LANG = 'zh'
+OG_LOCALE = 'zh_CN'
+LOCALE = 'zh_CN'
+
+# Default theme language.
+I18N_TEMPLATES_LANG = 'zh'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
