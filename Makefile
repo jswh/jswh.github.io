@@ -123,6 +123,7 @@ github: publish
 	git commit -a -m "write article"
 	git push origin pelican
 	cp CNAME $(OUTPUTDIR)/CNAME
+	cp -R static $(OUTPUTDIR)/static
 	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
 	git push origin $(GITHUB_PAGES_BRANCH)
 
