@@ -14,8 +14,6 @@ LOCALE = 'zh_CN'
 # Default theme language.
 I18N_TEMPLATES_LANG = 'zh_CN'
 
-# Blogroll
-LINKS = (('Jswh', "http://home.jswh.me"),)
 
 DEFAULT_PAGINATION = 15
 DEFAULT_DATE = 'fs'
@@ -40,11 +38,9 @@ ROBOTS = 'index, follow'
 COPYRIGHT_YEAR = 2018
 CC_LICENSE = { 'name': 'Creative Commons Attribution-ShareAlike', 'version':'4.0', 'slug': 'by-sa' }
 
-EXTRA_PATH_METADATA = {
-}
-#CUSTOM_CSS = 'static/custom.css'
-
 MAIN_MENU = True
+
+LINKS = (('主页', "http://home.jswh.me"),)
 
 SOCIAL = (('linkedin', 'http://www.linkedin.com/in/曹-维杰-a46255117'),
           ('github', 'https://github.com/jswh'))
@@ -55,6 +51,7 @@ MENUITEMS = (('归档', '/archives.html'),
             )
 
 CUSTOM_CSS = 'static/custom.css'
+
 GITHUB_CORNER_URL = "https://github.com/jswh/jswh.github.io"
 JINJA_ENVIRONMENT = {'extensions': []}
 GOOGLE_ANALYTICS = 'UA-58830058-1'
