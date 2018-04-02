@@ -60,6 +60,9 @@ MENUITEMS = (('归档', '/archives.html'),
              ('分类', '/categories.html'),
              ('标签', '/tags.html')
             )
+EXTRA_PATH_METADATA = {
+    'extra/custom.css': {'path': 'static/custom.css'},
+}
 CUSTOM_CSS = 'static/custom.css'
 GITHUB_CORNER_URL = "https://github.com/jswh/jswh.github.io"
 JINJA_ENVIRONMENT = {'extensions': []}
