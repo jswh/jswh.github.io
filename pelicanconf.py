@@ -32,6 +32,8 @@ CC_LICENSE = { 'name': 'Creative Commons Attribution-ShareAlike', 'version':'4.0
 
 MAIN_MENU = True
 MAIN_MENU_CATEGORY = True
+
+DISPLAY_PAGES_ON_MENU = False
 LINKS = (('个人主页', "http://home.jswh.me"),)
 
 SOCIAL = (('linkedin', 'http://www.linkedin.com/in/曹-维杰-a46255117'),
