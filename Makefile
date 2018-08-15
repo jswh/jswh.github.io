@@ -64,12 +64,20 @@ help:
 
 html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+	mkdir -p $(OUTPUTDIR)/static
+	mkdir -p $(OUTPUTDIR)/pages
+	cp -R -f static/* $(OUTPUTDIR)/static/
+	cp -R -f pages/* $(OUTPUTDIR)/pages/
 
 clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
 
 regenerate:
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+	mkdir -p $(OUTPUTDIR)/static
+	mkdir -p $(OUTPUTDIR)/pages
+	cp -R -f static/* $(OUTPUTDIR)/static/
+	cp -R -f pages/* $(OUTPUTDIR)/pages/
 
 serve:
 ifdef PORT
@@ -123,7 +131,6 @@ github: publish
 	git commit -a -m "write article"
 	git push origin pelican
 	cp CNAME $(OUTPUTDIR)/CNAME
-	cp -R -f static $(OUTPUTDIR)/static
 	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
 	git push origin $(GITHUB_PAGES_BRANCH)
 

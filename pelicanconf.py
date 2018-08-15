@@ -36,7 +36,8 @@ MAIN_MENU_CATEGORY = True
 DISPLAY_PAGES_ON_MENU = False
 LINKS = (
     ('个人主页', "http://home.jswh.me"),
-    ('软件推荐', "http://blog.jswh.me/pages/wo-jue-de-hao-yong-de-ruan-jian-lie-biao.html"),
+    ('我的轮子', "/pages/projects.html"),
+    ('软件推荐', "/pages/softwares.html"),
     )
 
 SOCIAL = (('linkedin', 'http://www.linkedin.com/in/曹-维杰-a46255117'),
