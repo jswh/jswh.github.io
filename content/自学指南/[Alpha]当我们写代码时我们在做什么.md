@@ -9,13 +9,8 @@ Tags: 写给女朋友看的编程入门指南
 小明说的语言就是编程语言，比如说下面这样的。
 
 ```c
-#include <stdio.h>
-
-int main(void) {
 	int result = 256 * 1024;
 	printf("%d",result);
-	return 0;
-}
 ```
 
 也许你一点都看不懂，没关系，刚学英语的时候也看不懂 “How are you? Fine, thanks, and you?”。也许你现在能看得懂一部分，比如知道`256 * 1024`是在做乘法，`printf`好像和打印有关系，就像我们看日语靠着汉字也能猜到几分意思。
