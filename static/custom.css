@@ -9,3 +9,6 @@ article div {
 article div p {
   line-height: 150%;
 }
+.cy-logo {
+  display: none !important;
+}
