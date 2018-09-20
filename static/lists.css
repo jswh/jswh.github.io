@@ -79,7 +79,10 @@ a {
 }
 .progress {
   height: 10px;
-  background-color: #5ac15a;
+  background-color: #e68f58;
   color: white;
   border-radius: 0 10px 10px 0;
+  padding-right: 1%;
+  font-size: 9px;
+  text-align: right;
 }
