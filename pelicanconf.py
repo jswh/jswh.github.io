@@ -38,6 +38,7 @@ LINKS = (
     ('个人主页', "http://home.jswh.me"),
     ('我的轮子', "/pages/projects.html"),
     ('软件推荐', "/pages/softwares.html"),
+    ('学习进度', "/pages/lean-stack.html"),
     )
 
 SOCIAL = (('linkedin', 'http://www.linkedin.com/in/曹-维杰-a46255117'),
