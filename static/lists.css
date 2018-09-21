@@ -22,14 +22,22 @@ li {
   cursor: pointer;
   color: #666;
 }
-li > span {
+li > a {
+  cursor: pointer;
+  color: #666;
+}
+li > span,
+li > a > span {
   display: block;
   font-size: 0.5em;
 }
-li > span::before {
+
+li > span::before,
+li > a > span::before {
   content: "( ";
 }
-li > span::after {
+li > span::after,
+li > a > span::after {
   content: " )";
 }
 li:hover,
@@ -78,11 +86,60 @@ a {
   text-decoration: none;
 }
 .progress {
-  height: 10px;
-  background-color: #e68f58;
+  height: 13px;
+  background: #ecf0f1;
+  font-size: 12px;
+  line-height: 13px;
+  text-align: left;
+}
+.progress a {
+  display: block;
   color: white;
-  border-radius: 0 10px 10px 0;
-  padding-right: 1%;
+  text-align: center;
+  float: left;
+  border-radius: 0 10px 0 0;
+}
+.progress .percent {
+  width: 24px;
+  border-radius: 0 12px 12px 0;
   font-size: 9px;
-  text-align: right;
+}
+.success {
+  background: #27ae60;
+}
+.success:hover {
+  background: #2ecc71;
+}
+.doing {
+  background-color: #e67e22;
+}
+.doing:hover {
+  background-color: #d35400;
+}
+.w10 {
+  width: 10%;
+}
+.w20 {
+  width: 20%;
+}
+.w30 {
+  width: 30%;
+}
+.w40 {
+  width: 40%;
+}
+.w50 {
+  width: 50%;
+}
+.w60 {
+  width: 60%;
+}
+.w70 {
+  width: 70%;
+}
+.w80 {
+  width: 80%;
+}
+.w90 {
+  width: 90%;
 }
