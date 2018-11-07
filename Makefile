@@ -129,7 +129,7 @@ cf_upload: publish
 github: publish
 	git add .
 	git commit -a -m "write article"
-	git push origin pelican
+	-git push origin pelican
 	cp CNAME $(OUTPUTDIR)/CNAME
 	mkdir -p $(OUTPUTDIR)/static
 	mkdir -p $(OUTPUTDIR)/pages
