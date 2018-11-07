@@ -12,3 +12,4 @@ output
 __pycache__
 .vscode
 plugins
+refresh_qiniu.py

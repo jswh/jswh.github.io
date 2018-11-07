@@ -3,3 +3,4 @@ DIR=$(readlink -f $PWD)
 source $DIR/bin/activate
 python -V
 make github
+[ -f refresh_cdn.py ] && python refresh_cdn.py
