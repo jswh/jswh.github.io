@@ -44,17 +44,24 @@
     <!-- Microsoft EDGE -->
     <meta name="msapplication-TileColor" content="#333">
 
-    <meta name="author" content="jswh" />
-    <meta name="description" content="" />
+<meta name="author" content="jswh" />
+<meta name="description" content="大部分得语言内容都静静得躺在语言手册中，如果复述一遍，一方面未必又手册描述得清晰，另一方面也是有悖总结知名。而且基础类的文章这么写法，常常会陷入种种细节的窠臼。所以这篇文章写写珊珊总是落不成笔。 所谓经典就是不管看几遍总是能够有所收获。翻看SICP的时候，开篇对于编程语言元素的总结简明扼要又醍醐灌顶 The Elements of Programming primitive expressions, which represent the simplest entities the language is concerned with, means of combination, by which compound elements are built from simpler ones, and means of abstraction, by which compound elements can be named and …" />
+<meta name="keywords" content="后端总结">
+
 <meta property="og:site_name" content="Mirror Lake"/>
-<meta property="og:type" content="blog"/>
-<meta property="og:title" content="Mirror Lake"/>
-<meta property="og:description" content=""/>
+<meta property="og:title" content="【后端总结】PHP基础"/>
+<meta property="og:description" content="大部分得语言内容都静静得躺在语言手册中，如果复述一遍，一方面未必又手册描述得清晰，另一方面也是有悖总结知名。而且基础类的文章这么写法，常常会陷入种种细节的窠臼。所以这篇文章写写珊珊总是落不成笔。 所谓经典就是不管看几遍总是能够有所收获。翻看SICP的时候，开篇对于编程语言元素的总结简明扼要又醍醐灌顶 The Elements of Programming primitive expressions, which represent the simplest entities the language is concerned with, means of combination, by which compound elements are built from simpler ones, and means of abstraction, by which compound elements can be named and …"/>
 <meta property="og:locale" content="zh_CN"/>
-<meta property="og:url" content="http://blog.jswh.me"/>
+<meta property="og:url" content="http://blog.jswh.me/hou-duan-zong-jie-phpji-chu.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-11-13 19:54:57.414850+08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://blog.jswh.me/author/jswh.html">
+<meta property="article:section" content="编程实践"/>
+<meta property="article:tag" content="后端总结"/>
 <meta property="og:image" content="/static/avatar.jpeg">
 
-  <title>Mirror Lake &ndash; 模块 标签</title>
+  <title>Mirror Lake &ndash; 【后端总结】PHP基础</title>
 
 </head>
 <body>
@@ -100,47 +107,81 @@
 
     </nav>
 
-
-
-<article>
+<article class="single">
   <header>
-    <h2><a href="http://blog.jswh.me/rust-mo-kuai-xi-tong-chu-tan.html#rust-mo-kuai-xi-tong-chu-tan">Rust 模块系统初探</a></h2>
+      
+    <h1 id="hou-duan-zong-jie-phpji-chu">【后端总结】PHP基础</h1>
     <p>
-      在 2018/11/07 16:16:57 发布于 <a href="http://blog.jswh.me/category/bian-cheng-shi-jian.html">编程实践</a> 分类
+    【后端总结】PHP基础
+      在 2018/11/13 19:54:57 发布于 <a href="http://blog.jswh.me/category/bian-cheng-shi-jian.html">编程实践</a> 分类
 
-          &#8226; 标签为
-              <a href="http://blog.jswh.me/tag/rust.html">Rust</a>,              <a href="http://blog.jswh.me/tag/mo-kuai.html">模块</a>
     </p>
   </header>
+
+
   <div>
-      <p>学习一门编程语言，知道如何引用外部的文件或者说模块系统是比较重要的一点，PHP用<code>autoload</code>机制，C有经典的<code>include</code>。最近写 <a href="https://github.com/jswh/wslexe">wslexe</a> 的时候，因为原作者用的 rust，所以就简单学习了一下。但是 rust 的模块文档是从顶部设计开始写的，很多概念，有些复杂，这里写一个应用导向的学习笔记。</p>
-<h5>引入文件</h5>
-<p>首先，让我们初始化一个项目。</p>
-<div class="highlight"><pre><span></span>mkdir rustmod
-<span class="nb">cd</span> rustmod
-cargo init
-</pre></div>
-
-
-<p>我们得到了下面这样的基础项目结构</p>
-<div class="highlight"><pre><span></span>rustmod
-├── Cargo.toml
-└── src
-    └── main.rs
-</pre></div>
-
-
-<p><code>main.rs</code>里面只有一个简单的输出的‘hello world’的<code>main</code>函数。我们新增一个<code>functions.rs</code>文件，将生成字符串的过程做成一个函数，供<code>main …</code></p>
-      <br>
-      <a class="btn" href="http://blog.jswh.me/rust-mo-kuai-xi-tong-chu-tan.html#rust-mo-kuai-xi-tong-chu-tan">阅读全文</a>
+    <p>大部分得语言内容都静静得躺在语言手册中，如果复述一遍，一方面未必又手册描述得清晰，另一方面也是有悖总结知名。而且基础类的文章这么写法，常常会陷入种种细节的窠臼。所以这篇文章写写珊珊总是落不成笔。</p>
+<p>所谓经典就是不管看几遍总是能够有所收获。翻看SICP的时候，开篇对于编程语言元素的总结简明扼要又醍醐灌顶</p>
+<blockquote>
+<p>The Elements of Programming   </p>
+<ol>
+<li>primitive expressions, which represent the simplest entities the language is concerned with,   </li>
+<li>means of combination, by which compound elements are built from simpler ones, and   </li>
+<li>means of abstraction, by which compound elements can be named and manipulated as units. </li>
+</ol>
+</blockquote>
+<h3>primitive expressions</h3>
   </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://blog.jswh.me/tag/hou-duan-zong-jie.html">后端总结</a>
+    </p>
+  </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+
+<div id="SOHUCS"  sid="【后端总结】PHP基础"></div>
+<script type="text/javascript">
+(function(){ 
+    var appid = 'cytm8uooo'; 
+    var conf = 'prod_8f0fdacdbce8936c4f8c28f5b8f5b56f';
+    var width = window.innerWidth || document.documentElement.clientWidth;
+    if (width < 960) {
+        window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');
+    } else {
+        var loadJs = function (d, a) {
+            var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+            var b = document.createElement("script");
+            b.setAttribute("type", "text/javascript");
+            b.setAttribute("charset", "UTF-8");
+            b.setAttribute("src", d);
+            if (typeof a === "function") {
+                if (window.attachEvent) {
+                    b.onreadystatechange = function () {
+                        var e = b.readyState;
+                        if (e === "loaded" || e === "complete") {
+                            b.onreadystatechange = null;
+                            a()
+                        }
+                    }
+                } else {
+                    b.onload = a
+                }
+            }
+            c.appendChild(b)
+        };
+        loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+            window.changyan.api.config({ appid: appid, conf: conf })
+        });
+    }
+})();
+</script>
+
 </article>
-
-  <div class="pagination">
-  </div>
-
-
-
 
     <footer>
 <p>

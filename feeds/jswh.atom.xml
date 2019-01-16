@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Mirror Lake - jswh</title><link href="http://blog.jswh.me/" rel="alternate"></link><link href="http://blog.jswh.me/feeds/jswh.atom.xml" rel="self"></link><id>http://blog.jswh.me/</id><updated>2018-11-07T17:07:14+08:00</updated><entry><title>后端总结序</title><link href="http://blog.jswh.me/hou-duan-zong-jie-xu.html" rel="alternate"></link><published>2018-11-07T17:07:14+08:00</published><updated>2018-11-07T17:07:14+08:00</updated><author><name>jswh</name></author><id>tag:blog.jswh.me,2018-11-07:/hou-duan-zong-jie-xu.html</id><summary type="html">&lt;p&gt;2014年毕业，按照毕业算工作年限是四年，如果是2014年初的实习开始，就快五年了。五年来，从一无所知的小白到现在前端后端都能写，虽然自认业务能力充足，但很多时候还是带点心虚。&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mirror Lake - jswh</title><link href="http://blog.jswh.me/" rel="alternate"></link><link href="http://blog.jswh.me/feeds/jswh.atom.xml" rel="self"></link><id>http://blog.jswh.me/</id><updated>2018-11-13T19:54:57+08:00</updated><entry><title>【后端总结】PHP基础</title><link href="http://blog.jswh.me/hou-duan-zong-jie-phpji-chu.html" rel="alternate"></link><published>2018-11-13T19:54:57+08:00</published><updated>2018-11-13T19:54:57+08:00</updated><author><name>jswh</name></author><id>tag:blog.jswh.me,2018-11-13:/hou-duan-zong-jie-phpji-chu.html</id><summary type="html">&lt;p&gt;大部分得语言内容都静静得躺在语言手册中，如果复述一遍，一方面未必又手册描述得清晰，另一方面也是有悖总结知名。而且基础类的文章这么写法，常常会陷入种种细节的窠臼。所以这篇文章写写珊珊总是落不成笔。&lt;/p&gt;
+&lt;p&gt;所谓经典就是不管看几遍总是能够有所收获。翻看SICP的时候，开篇对于编程语言元素的总结简明扼要又醍醐灌顶&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The Elements of Programming   &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;primitive expressions, which represent the simplest entities the language is concerned with,   &lt;/li&gt;
+&lt;li&gt;means of combination, by which compound elements are built from simpler ones, and   &lt;/li&gt;
+&lt;li&gt;means of abstraction, by which compound elements can be named and …&lt;/li&gt;&lt;/ol&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;大部分得语言内容都静静得躺在语言手册中，如果复述一遍，一方面未必又手册描述得清晰，另一方面也是有悖总结知名。而且基础类的文章这么写法，常常会陷入种种细节的窠臼。所以这篇文章写写珊珊总是落不成笔。&lt;/p&gt;
+&lt;p&gt;所谓经典就是不管看几遍总是能够有所收获。翻看SICP的时候，开篇对于编程语言元素的总结简明扼要又醍醐灌顶&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The Elements of Programming   &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;primitive expressions, which represent the simplest entities the language is concerned with,   &lt;/li&gt;
+&lt;li&gt;means of combination, by which compound elements are built from simpler ones, and   &lt;/li&gt;
+&lt;li&gt;means of abstraction, by which compound elements can be named and manipulated as units. &lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;primitive expressions&lt;/h3&gt;</content><category term="后端总结"></category></entry><entry><title>后端总结序</title><link href="http://blog.jswh.me/hou-duan-zong-jie-xu.html" rel="alternate"></link><published>2018-11-07T17:07:14+08:00</published><updated>2018-11-07T17:07:14+08:00</updated><author><name>jswh</name></author><id>tag:blog.jswh.me,2018-11-07:/hou-duan-zong-jie-xu.html</id><summary type="html">&lt;p&gt;2014年毕业，按照毕业算工作年限是四年，如果是2014年初的实习开始，就快五年了。五年来，从一无所知的小白到现在前端后端都能写，虽然自认业务能力充足，但很多时候还是带点心虚。&lt;/p&gt;
 &lt;p&gt;有的时候不得不承认，不是科班出生的，总归是要比别人慢一点。当别人已经开始学习大数据、AI、区块链的时候，我还在补数据结构、操作系统、编译原理，还补得磕磕绊绊。五年了，因为没有系统的检验，即使学了，还是不明白自己究竟有几斤几两。对事物的控制欲望让我想知道方方面面的细节，否则我就不放心。对于自身也是一样。虽然我知道面对寻常的后端开发工作，90%以上的工作都可以胜任，但只有在问题出现的时候才能判断这件事是否在这90%之中，让我非常的焦虑。这种焦虑，有点像以前做数学考卷的时候，知道某个题是用什么知识点来解的，但能不能解出来，还得算来看看——本质上是知识没有条理性。&lt;/p&gt;
 &lt;p&gt;最近一长段时间，大概有个一年半，尝试过用一些方法来梳理自己的知识体系。用过思维导图，感觉太过简单；用过wiki，但会陷入到细节中拔不出来。不管怎么做，总是不那么如意和顺畅。做准备工作的时候，明明觉得提纲里的东西都用得顺手，但是实际写来却艰苦卓绝。最近想明白了 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;2014年毕业，按照毕业算工作年限是四年，如果是2014年初的实习开始，就快五年了。五年来，从一无所知的小白到现在前端后端都能写，虽然自认业务能力充足，但很多时候还是带点心虚。&lt;/p&gt;
 &lt;p&gt;有的时候不得不承认，不是科班出生的，总归是要比别人慢一点。当别人已经开始学习大数据、AI、区块链的时候，我还在补数据结构、操作系统、编译原理，还补得磕磕绊绊。五年了，因为没有系统的检验，即使学了，还是不明白自己究竟有几斤几两。对事物的控制欲望让我想知道方方面面的细节，否则我就不放心。对于自身也是一样。虽然我知道面对寻常的后端开发工作，90%以上的工作都可以胜任，但只有在问题出现的时候才能判断这件事是否在这90%之中，让我非常的焦虑。这种焦虑，有点像以前做数学考卷的时候，知道某个题是用什么知识点来解的，但能不能解出来，还得算来看看——本质上是知识没有条理性。&lt;/p&gt;
