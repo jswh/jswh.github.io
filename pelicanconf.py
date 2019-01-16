@@ -21,11 +21,11 @@ SITEURL = 'http://blog.jswh.me'
 RELATIVE_URLS = False
 SITETITLE = 'Mirror Lake'
 SITESUBTITLE = 'stay calm like a mirror lake'
-SITELOGO = 'http://cdn.jswh.me/6405755.jpeg'
+SITELOGO = '/static/avatar.jpeg'
 BROWSER_COLOR = '#333'
 DISPLAY_CATEGORIES_ON_MENU = True
 
-FAVICON = 'http://cdn.jswh.me/6405755.jpeg'
+FAVICON = '/static/avatar.jpeg'
 ROBOTS = 'index, follow'
 
 COPYRIGHT_YEAR = 2018
@@ -62,7 +62,7 @@ LOCALE = 'zh_CN'
 I18N_TEMPLATES_LANG = 'zh_CN'
 
 # Enable i18n plugin, probably you already have some others here.
-PLUGIN_PATHS = ["plugins"]
+PLUGIN_PATHS = ["plugins", "pelican-plugins"]
 PLUGINS = ['i18n_subsites']
 # Enable Jinja2 i18n extension used to parse translations.
 JINJA_EXTENSIONS = ['jinja2.ext.i18n']

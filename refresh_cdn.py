@@ -10,7 +10,7 @@ auth = qiniu.Auth(access_key=access_key, secret_key=secret_key)
 cdn_manager = CdnManager(auth)
 # 需要刷新的目录链接
 
-dirs = []
+dirs = ['http://blog.jswh.me']
 for entry in os.scandir('./output'):
     if entry.is_file():
         dirs.append('http://blog.jswh.me/' + entry.name)
