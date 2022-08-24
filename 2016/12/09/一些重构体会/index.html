@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>一些重构体会 - Remote Cat</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Remote Cat"><meta name="msapplication-TileImage" content="/images/logo.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Remote Cat"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="最近在重构多媒体服务，包括爬虫和搜索两部分。原先的代码是一个实习生 Q 同学写的，用的 python。如果抽出其中的一块代码来看， Q 同学应该是一个重实践的同学，代码质量还是很不错的，但是之前看的时候我还是很难理解他的编程思路。直到这次彻底的重构，才发现代码中的一些问题。 这里记录下来，也是对自己的提醒。 命名这其实是一个老生常谈的问题，而且大部分人其实都有这个意识，Q 同学在对待大部分的命名上"><meta property="og:type" content="blog"><meta property="og:title" content="一些重构体会"><meta property="og:url" content="http://www.remotecat.us/2016/12/09/%E4%B8%80%E4%BA%9B%E9%87%8D%E6%9E%84%E4%BD%93%E4%BC%9A/"><meta property="og:site_name" content="Remote Cat"><meta property="og:description" content="最近在重构多媒体服务，包括爬虫和搜索两部分。原先的代码是一个实习生 Q 同学写的，用的 python。如果抽出其中的一块代码来看， Q 同学应该是一个重实践的同学，代码质量还是很不错的，但是之前看的时候我还是很难理解他的编程思路。直到这次彻底的重构，才发现代码中的一些问题。 这里记录下来，也是对自己的提醒。 命名这其实是一个老生常谈的问题，而且大部分人其实都有这个意识，Q 同学在对待大部分的命名上"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://www.remotecat.us/img/og_image.png"><meta property="article:published_time" content="2016-12-08T17:56:57.000Z"><meta property="article:modified_time" content="2022-08-24T17:59:40.136Z"><meta property="article:author" content="remote-cat"><meta property="article:tag" content="remote job"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.remotecat.us/2016/12/09/%E4%B8%80%E4%BA%9B%E9%87%8D%E6%9E%84%E4%BD%93%E4%BC%9A/"},"headline":"一些重构体会","image":["http://www.remotecat.us/img/og_image.png"],"datePublished":"2016-12-08T17:56:57.000Z","dateModified":"2022-08-24T17:59:40.136Z","author":{"@type":"Person","name":"remote-cat"},"publisher":{"@type":"Organization","name":"Remote Cat","logo":{"@type":"ImageObject"}},"description":"最近在重构多媒体服务，包括爬虫和搜索两部分。原先的代码是一个实习生 Q 同学写的，用的 python。如果抽出其中的一块代码来看， Q 同学应该是一个重实践的同学，代码质量还是很不错的，但是之前看的时候我还是很难理解他的编程思路。直到这次彻底的重构，才发现代码中的一些问题。 这里记录下来，也是对自己的提醒。 命名这其实是一个老生常谈的问题，而且大部分人其实都有这个意识，Q 同学在对待大部分的命名上"}</script><link rel="canonical" href="http://www.remotecat.us/2016/12/09/%E4%B8%80%E4%BA%9B%E9%87%8D%E6%9E%84%E4%BD%93%E4%BC%9A/"><link rel="icon" href="/images/logo.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 6.1.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">Remote Cat</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/about">关于</a></div><div class="navbar-end"><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2016-12-08T17:56:57.000Z" title="12/9/2016, 1:56:57 AM">2016-12-09</time>发表</span></div></div><h1 class="title is-3 is-size-4-mobile">一些重构体会</h1><div class="content"><p>最近在重构多媒体服务，包括爬虫和搜索两部分。原先的代码是一个实习生 Q 同学写的，用的 python。如果抽出其中的一块代码来看， Q 同学应该是一个重实践的同学，代码质量还是很不错的，但是之前看的时候我还是很难理解他的编程思路。直到这次彻底的重构，才发现代码中的一些问题。 这里记录下来，也是对自己的提醒。</p>
+<h3 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h3><p>这其实是一个老生常谈的问题，而且大部分人其实都有这个意识，Q 同学在对待大部分的命名上也都在尽量选择合适词汇。但是，对于工具函数却没有一视同仁。 比如</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">def _l(x):</span><br><span class="line">    r = list(map(_ft, x))</span><br><span class="line">    if len(r) == 1:</span><br><span class="line">        r = r[0]</span><br><span class="line">    return r</span><br></pre></td></tr></table></figure>
+
+<p>这是一个内部函数，用来提取出爬取的元素，并根据获取的元素数量返回不同的数据结构，在爬取数据的时候多次用到。即使不用太高级的英语，直接用 get_result_as_list_or_string已经可以极大地缓解在阅读过程中返回去看这里干了什么的情况。同样的，用 x、r之类的做变量名， 虽然我可以明白这个函数在做什么操作，但是我并没有办法把它和业务的某一部分联系起来。</p>
+<p>这样的例子在整个源代码中还有很多，虽然最后还是可以看懂，但是读起来就不怎么舒畅。</p>
+<h3 id="保持程序的轻量"><a href="#保持程序的轻量" class="headerlink" title="保持程序的轻量"></a>保持程序的轻量</h3><p>这个各人可能会有不同的习惯。我不喜欢在功能很简单的时候就引入太重量级的东西。比如，如果你整个程序只有五句 SQL，那为什么要引入一个 ORM。 多媒体服务中，一共不会用到超过10个 ES 访问，而且这些访问的语句是固定死的，也不会频繁改动。ES 的访问就是简单的 Http 请求， 所以自己写个文件来处理并不会很麻烦。但是一旦用上了 elasticsearch-dsl-py, 我除了要理解 ES，还要理解这个库的用法，就为了那不多的几个 ES 请求。</p>
+<p>同样的，后台系统中是有开放可用的队列服务的，为什么一定要用 celery 来复杂化这个事情，还导致重建 ES 索引这样的任务必须要用 api 才能下发。</p>
+<h3 id="以业务逻辑而不是功能对代码分层"><a href="#以业务逻辑而不是功能对代码分层" class="headerlink" title="以业务逻辑而不是功能对代码分层"></a>以业务逻辑而不是功能对代码分层</h3><p>按照我看代码的情况，原先的设计中包括一个接口层，一个爬虫层，一个搜索引擎的实现层，最底下是支持各个层的 lib。 Q 同学做了很多的功能划分：一个 api 文件夹放所有的 api 实现，一个 engine 文件夹放各个源的搜索、爬取和索引的实现文件，一个源一个文件夹。 如果严格按照这样的方式来组织文件，到也不错，问题在于，Q 同学把 ES 相关的东西也放了进去，也许是觉得 ES 也是一种搜索实现吧， 但是 ES 的数据模型等其他信息也一并放在了这里，这就让刚读代码的我有些搞不清自己之前的阅读思路是否是对的。</p>
+<p>实际上，整个业务逻辑是这样的</p>
+<blockquote>
+<p>用户发起搜索 –&gt; 社区程序向多媒体服务发起搜索请求 –&gt; 调用搜索接口，使用 ES 来搜本地库 –&gt; 使用用户的搜索词去爬取、更新数据</p>
+</blockquote>
+<p>所以，ES 虽然也是搜索，但是在中业务的层次是和这里的 engine 不同的：同样是 search.py, ES 下是真的搜索，其他的其实是各个爬虫的组件； 同样是 job.py, 各个源下的是爬虫任务，ES 下的则爬虫的触发器;</p>
+<p>另一个问题是，因为是按照爬取的目标不同而进行的划分，所以在努力地爬取功能下完成各个工作，导致许多重复的工作。如果按照</p>
+<blockquote>
+<p>爬取-&gt;整理-&gt;入库-&gt;索引</p>
+</blockquote>
+<p>流程，各个爬虫只要返回的多媒体数据结构一致， 入库和索引的步骤都可以用统一的实现。</p>
+<p>最终重构的时候，我去掉了 api 层，把搜索放回了社区程序，因为总共只有2 ~ 3个 ES 查询，且是强业务的功能，没有必要放在这样以爬虫为主的程序上， 还需要一层 api, 用上 flask。爬取任务的触发就用 job 形式直接下发到队列。整个程序就按以下的流程来组织了。</p>
+<blockquote>
+<p>任务监视器 –&gt; 爬虫 –&gt; 入库 –&gt; 索引</p>
+</blockquote>
+<p>又因为，去掉额外的爬取源，所以合并了爬虫和入库。</p>
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>代码是我写的，但是以后阅读和维护代码的人并不一定是我；我现在知道这里为什么这么写，一个月后未必知道。 所以写代码的时候要多想想应该如何保持简洁和逻辑的通顺，多问问我为什要这么写。</p>
+</div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2016/12/10/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9A%84%E6%AD%A3%E7%A1%AE%E5%A7%BF%E5%8A%BF/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">初始化一个 Python 开发环境的正确姿势</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2016/11/03/%E5%9B%9E%E5%BD%92%E7%A4%BE%E4%BA%A4/"><span class="level-item">回归社交</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/disqusjs@1.3.0/dist/disqusjs.css"><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script src="https://cdn.jsdelivr.net/npm/disqusjs@1.3.0/dist/disqus.js"></script><script>new DisqusJS({
+            shortname: 'remotecat',
+            apikey: "AbU5VIuJ4Pb9oWDQmTwrkUqbTZKBiaILVTe47Op0y9u5VdsZnkXVmG0a8nS9sz3b",
+            siteName: "Remote Cat",
+            identifier: "2016/12/09/一些重构体会/",
+            url: "http://www.remotecat.us/2016/12/09/%E4%B8%80%E4%BA%9B%E9%87%8D%E6%9E%84%E4%BD%93%E4%BC%9A/",
+            title: "一些重构体会",
+            
+            
+            
+            
+        });</script></div></div></div><!--!--><div class="column column-right is-4-tablet is-4-desktop is-4-widescreen  order-3"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/images/logo.svg" alt="Remote Cat"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Remote Cat</p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">20</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">0</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">0</p></a></div></div></nav></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-12-13T18:41:09.000Z">2020-12-14</time></p><p class="title"><a href="/2020/12/14/%E5%91%A8%E8%AE%B02020-12-14/">周记2020-12-14</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-05-31T18:40:15.000Z">2020-06-01</time></p><p class="title"><a href="/2020/06/01/%E4%B8%80%E7%82%B9%E6%8A%80%E6%9C%AF%E7%AE%A1%E7%90%86%E6%80%9D%E8%80%83/">一点技术管理思考</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-04-16T18:39:16.000Z">2020-04-17</time></p><p class="title"><a href="/2020/04/17/mdbook%E7%9B%AE%E5%BD%95%E7%94%9F%E6%88%90%E4%BB%A5%E5%8F%8A%E9%80%82%E5%BA%94typora%E5%85%AC%E5%BC%8F/">mdbook目录生成以及适应typora公式</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-03-30T18:38:01.000Z">2020-03-31</time></p><p class="title"><a href="/2020/03/31/WmDog%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B/">WmDog文件处理流程</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2019-08-14T18:35:47.000Z">2019-08-15</time></p><p class="title"><a href="/2019/08/15/windows%E7%99%BB%E5%BD%95%E8%87%AA%E5%8A%A8%E5%8C%96PPTP/">windows登录自动化 PPTP</a></p></div></article></div></div><!--!--></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">Remote Cat</a><p class="is-size-7"><span>&copy; 2022 remote-cat</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
